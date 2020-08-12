@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Falcon Store</title>
+
+        <!--Stylings -->
+        <!--font awesome-->
+        <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+
+        <!--custom stylings-->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header-strip">
+                <div class="navigation-div">
+                    <div class="brand">BRAND</div>
+
+                    <nav class="nav-bar">
+                        <ul class="nav-list">
+                            <li class="nav-list-item"><a href="#">Home</a></li>
+                            <li class="nav-list-item"><a href="#">Shop</a></li>
+                            <li class="nav-list-item">
+                                <a href="#">Catalogue</a>
+                            </li>
+                            <li class="nav-list-item"><a href="#">About</a></li>
+                            <li class="nav-list-item">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="nav-icons">
+                        <div class="user-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% block content-block %} {% endblock content-block%}
+        </div>
+        <script src="{% static 'js/all.js' %}"></script>
+    </body>
+</html>

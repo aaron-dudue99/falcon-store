@@ -6,6 +6,68 @@
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Montserrat;
+  font-size: 1rem;
+}
+
+.wrapper {
+  background-color: #eaeaea;
+}
+
+.wrapper .header-strip {
+  background-color: #33363b;
+  min-height: 100px;
+}
+
+.wrapper .header-strip .navigation-div {
+  margin: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eaeaea;
+  min-height: 100px;
+}
+
+.wrapper .header-strip .navigation-div .nav-bar .nav-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header-strip .navigation-div .nav-bar .nav-list .nav-list-item {
+  display: inline;
+  padding: 0 1rem;
+}
+
+.wrapper .header-strip .navigation-div .nav-bar .nav-list .nav-list-item a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+.wrapper .header-strip .navigation-div .nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .header-strip .navigation-div .nav-icons .user-icon,
+.wrapper .header-strip .navigation-div .nav-icons .cart-icon {
+  padding: 0 0 0 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
