@@ -1,0 +1,122 @@
+.hero-section {
+    width: 100%;
+    min-height: 600px;
+    height: calc(100vh-200px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: url("../images/banner1.png");
+    background-position: left;
+
+    .hero-info {
+        width: 45%;
+        padding: 0 5rem;
+
+        h1 {
+            font-family: Livvic;
+            color: #333;
+        }
+
+        p {
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            color: $dark-slate;
+        }
+
+        .shop-btn {
+            cursor: pointer;
+            background-color: $trusty-blue;
+            border: transparent;
+            padding: 0.6rem 2rem;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+
+            a {
+                text-decoration: none;
+                color: $light-gray;
+            }
+        }
+
+        .shop-btn:hover {
+            background-color: $hover-blue;
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 12px rgba(51, 54, 59, 0.3);
+        }
+    }
+}
+
+.content-section {
+    margin: 3rem 0 0;
+
+    .content-grid {
+        margin: 2rem auto 0;
+        width: calc(100vw - 10rem);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+        padding: 4rem 0;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+
+        .content-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .svg-icn {
+                display: inline;
+                color: $trusty-blue;
+                font-size: 2rem;
+            }
+
+            .info-text {
+                padding: 1.5rem;
+                text-align: center;
+
+                h3 {
+                    padding: 1rem;
+                    color: #333;
+                }
+
+                p {
+                    color: $dark-slate;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .collections-div {
+            position: relative;
+            background: $dark-slate;
+            width: 100%;
+            min-height: 400px;
+            height: 500px;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s ease-in-out;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+            }
+
+            .text-span {
+                z-index: 2;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                color: $light-gray;
+                padding: 2rem;
+            }
+
+            h4 {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

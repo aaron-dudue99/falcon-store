@@ -4,14 +4,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Falcon Store</title>
+        <title>Falcon Online Gadget Store</title>
 
         <!--Stylings -->
         <!--font awesome-->
-        <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+        <link rel="stylesheet" href="{% static 'styles/all.css' %}" />
 
         <!--custom stylings-->
-        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
     </head>
     <body>
         <div class="wrapper">
@@ -45,6 +45,45 @@
             </div>
 
             {% block content-block %} {% endblock content-block%}
+
+            <footer>
+                <div class="footer-div">
+                    <div class="navigations-div">
+                        <a href="">Shop</a>
+                        <a href="">Catalogue</a>
+                        <a href="">About</a>
+                        <a href="">Contact</a>
+                    </div>
+                    <div class="contact-div">
+                        <h3>Contact Info</h3>
+                        <p>
+                            <span
+                                ><i class="fas fa-search-location"></i> 203 Fake
+                                St. Mountain View, San Francisco, California,
+                                USA</span
+                            >
+                        </p>
+
+                        <p>
+                            <span
+                                ><i class="fas fa-phone-alt"></i> +263 77 123
+                                1234</span
+                            >
+                        </p>
+
+                        <p>
+                            <span
+                                ><i class="fas fa-envelope"></i>
+                                mail@domain.co.zw</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="copy-div">
+                        Copyrights &copy; 2020 by Aaron Dudue
+                    </div>
+                </div>
+            </footer>
         </div>
         <script src="{% static 'js/all.js' %}"></script>
     </body>

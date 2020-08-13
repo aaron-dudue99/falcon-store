@@ -1,4 +1,5 @@
 $trusty-blue: #368cbf;
+$hover-blue: #1675ac;
 $green: #7ebc59;
 $dark-slate: #33363b;
 $light-gray: #eaeaea;
@@ -7,6 +8,7 @@ $light-gray: #eaeaea;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -22,12 +24,13 @@ body {
         min-height: 100px;
 
         .navigation-div {
-            margin: 0 3rem;
+            margin: 0 5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: $light-gray;
             min-height: 100px;
+            font-weight: 700;
 
             .nav-bar {
                 .nav-list {
@@ -59,4 +62,9 @@ body {
             }
         }
     }
+}
+
+@import "index";
+
+footer {
 }
