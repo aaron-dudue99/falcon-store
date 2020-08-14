@@ -1,8 +1,9 @@
 $trusty-blue: #368cbf;
 $hover-blue: #1675ac;
-$green: #7ebc59;
+$green: #72af4f;
 $dark-slate: #33363b;
 $light-gray: #eaeaea;
+$darker-gray: #dddada;
 
 * {
     margin: 0;
@@ -32,6 +33,11 @@ body {
             min-height: 100px;
             font-weight: 700;
 
+            .brand {
+                font-family: Lobster;
+                font-size: 2rem;
+                font-weight: 400;
+            }
             .nav-bar {
                 .nav-list {
                     list-style: none;
@@ -58,13 +64,97 @@ body {
                 .cart-icon {
                     padding: 0 0 0 1rem;
                     cursor: pointer;
+
+                    a {
+                        color: $light-gray;
+                    }
                 }
+            }
+        }
+    }
+
+    footer {
+        margin: 5rem 0 0;
+
+        .footer-div {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            color: rgb(90, 86, 86);
+
+            .navigations-div {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    padding-bottom: 0.5rem;
+                }
+
+                a {
+                    padding: 0.3rem 0;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    color: rgb(90, 86, 86);
+                }
+            }
+
+            .contact-div {
+                h3 {
+                    padding-bottom: 1rem;
+                }
+
+                p {
+                    padding: 0.5rem;
+                    span {
+                        padding: 0.5rem;
+                        color: $trusty-blue;
+                    }
+                }
+
+                .social-links-div {
+                    padding: 2rem 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+
+                    div {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid rgba(90, 86, 86, 0.2);
+                        text-align: center;
+                        cursor: pointer;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    div:hover {
+                        background: $trusty-blue;
+                        border: none;
+                        color: $light-gray;
+                    }
+                }
+            }
+        }
+
+        .copy-div {
+            width: 100%;
+            margin-top: 3rem;
+            color: $dark-slate;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+
+            p {
+                padding: 1rem;
+                font-weight: 700;
             }
         }
     }
 }
 
 @import "index";
-
-footer {
-}
+@import "store";
+@import "cart";

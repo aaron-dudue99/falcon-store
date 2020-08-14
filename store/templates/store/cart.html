@@ -1,0 +1,52 @@
+{% extends 'store/main.html' %} {% load static %} {% block content-block%}
+<h2 class="page-title">Cart</h2>
+<div class="box-element">
+    <a href="{% url 'store' %}" class="continue-btn"
+        ><span>&#x2190;</span> <strong>Continue Shopping</strong></a
+    >
+
+    <table class="table">
+        <tr>
+            <th>
+                <h5>Items: <strong>20</strong></h5>
+            </th>
+            <th>
+                <h5>Total: <strong>$500</strong></h5>
+            </th>
+            <th>
+                <a href="{% url 'checkout' %}" class="checkout-btn continue-btn"
+                    >Checkout</a
+                >
+            </th>
+        </tr>
+    </table>
+</div>
+
+<div class="box-element">
+    <div class="cart-row">
+        <div style="flex: 2;"></div>
+        <div style="flex: 2;"><strong>Item</strong></div>
+        <div style="flex: 1;"><strong>Price</strong></div>
+        <div style="flex: 1;"><strong>Quantity</strong></div>
+        <div style="flex: 1;"><strong>Total</strong></div>
+    </div>
+
+    <div class="cart-row">
+        <div style="flex: 2;">
+            <img
+                src="{% static 'images/apple-iphone-xr-5.jpg' %}"
+                alt=""
+                class="img-row"
+            />
+        </div>
+        <div style="flex: 2;">Product Name</div>
+        <div style="flex: 1;">$200</div>
+        <div style="flex: 1;" class="quant-div">
+            <button class="prepend"><strong>-</strong></button>
+            <div><p>3</p></div>
+            <button class="append"><strong>+</strong></button>
+        </div>
+        <div style="flex: 1;">$600</div>
+    </div>
+</div>
+{% endblock content-block %}

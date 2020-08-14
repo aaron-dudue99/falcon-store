@@ -1,0 +1,95 @@
+.box-element {
+    margin: 2rem 5rem;
+    padding: 1rem;
+    background: #fff;
+
+    .continue-btn {
+        margin: 1rem 0;
+        background: $trusty-blue;
+        padding: 0.5rem 1.5rem;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        color: $light-gray;
+        text-decoration: none;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .continue-btn:hover {
+        box-shadow: 3px 3px 8px $dark-slate;
+        transform: translateY(-3px);
+    }
+
+    .table {
+        width: 100%;
+        padding: 1rem;
+
+        tr {
+            padding: 1rem;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        .checkout-btn {
+            float: right;
+            background: $green;
+        }
+
+        .checkout-btn:hover {
+            transform: translateX(-3px);
+        }
+    }
+
+    .cart-row {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+
+        .img-row {
+            width: 100px;
+        }
+
+        .quant-div {
+            display: flex;
+
+            .prepend,
+            .append {
+                cursor: pointer;
+                height: 2.5rem;
+                padding: 0.5rem 0.6rem;
+                border: 1.35px solid $trusty-blue;
+                color: $trusty-blue;
+            }
+
+            .prepend {
+                border-radius: 5px 0 0 5px;
+            }
+
+            .append {
+                border-radius: 0 5px 5px 0;
+            }
+
+            .prepend:hover,
+            .append:hover {
+                box-shadow: 3px 3px 8px $dark-slate;
+                transform: translateY(-3px);
+                background: $trusty-blue;
+                color: $light-gray;
+            }
+
+            div {
+                padding: 1rem;
+                border-top: 1px solid rgba(51, 51, 51, 0.3);
+                border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+                height: 2.5rem;
+                overflow: hidden;
+
+                p {
+                    margin: auto;
+                    transform: translateY(-20%);
+                }
+            }
+        }
+    }
+}

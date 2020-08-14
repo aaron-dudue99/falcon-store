@@ -1,0 +1,54 @@
+{% extends 'store/main.html' %} {% load static %} {% block content-block %}
+<h2 class="page-title">Store</h2>
+
+<div class="store-div">
+    <div class="store-item">
+        <img
+            src="{% static 'images/apple-iphone-xr-5.jpg' %}"
+            alt="Shop Item"
+        />
+
+        <div class="product-details">
+            <h3>Product Name</h3>
+            <h4>$20.00</h4>
+
+            <div class="action-btns">
+                <button class="add-to-cart-btn update-cart">Add to Cart</button>
+                <a href="" class="view-item">View Item</a>
+            </div>
+        </div>
+    </div>
+    <div class="store-item">
+        <img
+            src="{% static 'images/apple-iphone-xr-5.jpg' %}"
+            alt="Shop Item"
+        />
+
+        <div class="product-details">
+            <h3>Product Name</h3>
+            <h4>$20.00</h4>
+
+            <div class="action-btns">
+                <button class="add-to-cart-btn update-cart">Add to Cart</button>
+                <a href="" class="view-item">View Item</a>
+            </div>
+        </div>
+    </div>
+    <div class="store-item">
+        <img
+            src="{% static 'images/apple-iphone-xr-5.jpg' %}"
+            alt="Shop Item"
+        />
+
+        <div class="product-details">
+            <h3>Product Name</h3>
+            <h4>$20.00</h4>
+
+            <div class="action-btns">
+                <button class="add-to-cart-btn update-cart">Add to Cart</button>
+                <a href="" class="view-item">View Item</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content-block %}

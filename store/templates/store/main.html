@@ -17,28 +17,33 @@
         <div class="wrapper">
             <div class="header-strip">
                 <div class="navigation-div">
-                    <div class="brand">BRAND</div>
+                    <div class="brand"><em>Falcon Store</em></div>
 
                     <nav class="nav-bar">
                         <ul class="nav-list">
-                            <li class="nav-list-item"><a href="#">Home</a></li>
-                            <li class="nav-list-item"><a href="#">Shop</a></li>
                             <li class="nav-list-item">
-                                <a href="#">Catalogue</a>
+                                <a href="{% url 'index' %}">Home</a>
                             </li>
-                            <li class="nav-list-item"><a href="#">About</a></li>
                             <li class="nav-list-item">
-                                <a href="#">Contact</a>
+                                <a href="{% url 'store' %}">Shop</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a href="{% url 'about' %}">About</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a href="{% url 'contact' %}">Contact</a>
                             </li>
                         </ul>
                     </nav>
 
                     <div class="nav-icons">
                         <div class="user-icon">
-                            <i class="fas fa-user"></i>
+                            <a href=""><i class="fas fa-user"></i></a>
                         </div>
                         <div class="cart-icon">
-                            <i class="fas fa-shopping-cart"></i>
+                            <a href="{% url 'cart' %}"
+                                ><i class="fas fa-shopping-cart"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
@@ -49,6 +54,7 @@
             <footer>
                 <div class="footer-div">
                     <div class="navigations-div">
+                        <h3>Site Links</h3>
                         <a href="">Shop</a>
                         <a href="">Catalogue</a>
                         <a href="">About</a>
@@ -57,31 +63,39 @@
                     <div class="contact-div">
                         <h3>Contact Info</h3>
                         <p>
-                            <span
-                                ><i class="fas fa-search-location"></i> 203 Fake
-                                St. Mountain View, San Francisco, California,
-                                USA</span
-                            >
+                            <span><i class="fas fa-search-location"></i> </span>
+                            203 Fake St. Mountain View, San Francisco,
+                            California, USA
                         </p>
 
                         <p>
-                            <span
-                                ><i class="fas fa-phone-alt"></i> +263 77 123
-                                1234</span
-                            >
+                            <span><i class="fas fa-phone-alt"></i> </span>+263
+                            77 123 1234
                         </p>
 
                         <p>
-                            <span
-                                ><i class="fas fa-envelope"></i>
-                                mail@domain.co.zw</span
-                            >
+                            <span><i class="fas fa-envelope"></i> </span
+                            >mail@domain.co.zw
                         </p>
-                    </div>
 
-                    <div class="copy-div">
-                        Copyrights &copy; 2020 by Aaron Dudue
+                        <div class="social-links-div">
+                            <div>
+                                <p><i class="fab fa-facebook-f"></i></p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-twitter"></i></p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-instagram"></i></p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-whatsapp"></i></p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="copy-div">
+                    <p>Copyrights &copy; 2020 by Falcon Store</p>
                 </div>
             </footer>
         </div>
