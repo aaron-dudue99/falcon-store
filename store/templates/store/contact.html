@@ -1,2 +1,97 @@
 {% extends 'store/main.html' %} {% load static %}{% block content-block%}
+<h2 class="page-title">Contact Us</h2>
+
+<div class="checkout-flex">
+    <div class="box-element">
+        <h3>Get in touch</h3>
+
+        <form action="" id="form">
+            <div class="form-field">
+                <input
+                    type="text"
+                    name="firstname"
+                    placeholder="First Name"
+                    required
+                    class="form-control"
+                />
+            </div>
+            <div class="form-field">
+                <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Last Name"
+                    required
+                    class="form-control"
+                />
+            </div>
+            <div class="form-field">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="form-control"
+                    required
+                />
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    class="form-control"
+                />
+            </div>
+            <div class="form-field">
+                <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Message"
+                    class="form-control"
+                ></textarea>
+            </div>
+
+            <input
+                type="submit"
+                value="Send Message"
+                class="continue-btn"
+                id="form-button"
+            />
+        </form>
+    </div>
+
+    <div class="box-element" id="contact-div">
+        <h3>Contact Details</h3>
+
+        <p>
+            <span><i class="fas fa-search-location"></i> </span>
+            203 Fake St. Mountain View, San Francisco, California, USA
+        </p>
+
+        <p>
+            <span><i class="fas fa-phone-alt"></i> </span>+263 77 123 1234
+        </p>
+
+        <p>
+            <span><i class="fas fa-envelope"></i> </span>mail@domain.co.zw
+        </p>
+
+        <div class="social-links-div">
+            <div>
+                <p><i class="fab fa-facebook-f"></i></p>
+            </div>
+            <div>
+                <p><i class="fab fa-twitter"></i></p>
+            </div>
+            <div>
+                <p><i class="fab fa-instagram"></i></p>
+            </div>
+            <div>
+                <p><i class="fab fa-whatsapp"></i></p>
+            </div>
+        </div>
+    </div>
+</div>
 {%endblock content-block %}

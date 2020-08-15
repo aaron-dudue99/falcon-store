@@ -1,0 +1,43 @@
+.checkout-flex {
+    margin: 2rem 5rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 3fr;
+
+    .box-element {
+        margin: 0;
+        padding: 2rem;
+
+        .user-info {
+            padding: 1rem 0;
+
+            p {
+                padding: 0.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .shipping-info {
+            p {
+                padding: 0.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .form-control {
+            border: #756f6f solid 1.2px;
+            padding: 0.2rem;
+            margin: 0.1rem;
+            border-radius: 5px;
+        }
+
+        #form-button {
+            border: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}

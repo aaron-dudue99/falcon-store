@@ -2,7 +2,7 @@
     margin: 2rem 5rem;
     padding: 1rem;
     background: #fff;
-
+    box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.3);
     .continue-btn {
         margin: 1rem 0;
         background: $trusty-blue;
@@ -15,7 +15,7 @@
     }
 
     .continue-btn:hover {
-        box-shadow: 3px 3px 8px $dark-slate;
+        box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.5);
         transform: translateY(-3px);
     }
 
@@ -72,8 +72,8 @@
 
             .prepend:hover,
             .append:hover {
-                box-shadow: 3px 3px 8px $dark-slate;
-                transform: translateY(-3px);
+                box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.5);
+                //transform: translateY(-3px);
                 background: $trusty-blue;
                 color: $light-gray;
             }

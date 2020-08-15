@@ -1,2 +1,14 @@
 {% extends 'store/main.html' %} {% load static %}{% block content-block%}
+<h2 class="page-title">About Us</h2>
+
+<div class="box-element">
+    <p id="about-info">
+        Falcon Store is a tech store where you can get all your gadgets brand
+        new. Visit Us online or at our store. Address is on Contact Us page.
+    </p>
+
+    <button class="continue-btn contact-btn">
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </button>
+</div>
 {%endblock content-block %}

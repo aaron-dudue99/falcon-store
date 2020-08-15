@@ -37,6 +37,11 @@ body {
                 font-family: Lobster;
                 font-size: 2rem;
                 font-weight: 400;
+
+                a {
+                    color: $light-gray;
+                    text-decoration: none;
+                }
             }
             .nav-bar {
                 .nav-list {
@@ -158,3 +163,6 @@ body {
 @import "index";
 @import "store";
 @import "cart";
+@import "checkout";
+@import "contact";
+@import "about";

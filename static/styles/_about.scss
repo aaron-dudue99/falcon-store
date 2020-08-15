@@ -1,0 +1,17 @@
+.box-element {
+    #about-info {
+        padding: 3rem;
+        margin: auto;
+        color: $dark-slate;
+    }
+
+    .contact-btn {
+        border: transparent;
+        margin: 1rem 3rem;
+
+        a {
+            text-decoration: none;
+            color: $light-gray;
+        }
+    }
+}
