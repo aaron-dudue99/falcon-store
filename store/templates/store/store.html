@@ -14,7 +14,13 @@
             <h4>{{product.price|floatformat:2}}</h4>
 
             <div class="action-btns">
-                <button class="add-to-cart-btn update-cart">Add to Cart</button>
+                <button
+                    data-product="{{product.id}}"
+                    data-action="add"
+                    class="add-to-cart-btn update-cart"
+                >
+                    Add to Cart
+                </button>
                 <a href="" class="view-item">View Item</a>
             </div>
         </div>
