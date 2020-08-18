@@ -15,7 +15,7 @@ def index(request):
 
     else:
         items = []
-        order = {'get_cart_items':0, 'get_cart_total': 0}
+        order = {'get_cart_items':0, 'get_cart_total': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
     context={'cartItems':cartItems}
@@ -30,7 +30,7 @@ def store(request):
 
     else:
         items = []
-        order = {'get_cart_items':0, 'get_cart_total': 0}
+        order = {'get_cart_items':0, 'get_cart_total': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
     products = Product.objects.all()
@@ -46,7 +46,7 @@ def cart(request):
 
     else:
         items = []
-        order = {'get_cart_items':0, 'get_cart_total': 0}
+        order = {'get_cart_items':0, 'get_cart_total': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
 
@@ -62,7 +62,7 @@ def checkout(request):
 
     else:
         items = []
-        order = {'get_cart_items':0, 'get_cart_total': 0}
+        order = {'get_cart_items':0, 'get_cart_total': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
     context={'items':items, 'order':order, 'cartItems':cartItems}
@@ -93,7 +93,7 @@ def updateItem(request):
     if action == 'add':
         orderitem.quantity = (orderitem.quantity + 1)
 
-    elif action == remove:
+    elif action == 'remove':
         orderitem.quantity = (orderitem.quantity - 1)
 
     orderitem.save()
@@ -102,3 +102,9 @@ def updateItem(request):
         orderitem.delete()
 
     return JsonResponse('item was added', safe=False)
+
+
+def processOrder(request):
+    print('Data:', request.body)
+
+    return JsonResponse('Payment Complete..', safe = False) 

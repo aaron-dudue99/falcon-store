@@ -566,8 +566,12 @@ body {
   font-weight: 700;
 }
 
+.checkout-flex .box-element .form-field {
+  padding: 0.3rem 0;
+}
+
 .checkout-flex .box-element .form-control {
-  border: #756f6f solid 1.2px;
+  border: #756f6f solid 2px;
   padding: 0.2rem;
   margin: 0.1rem;
   border-radius: 5px;
@@ -576,10 +580,16 @@ body {
 .checkout-flex .box-element #form-button {
   border: transparent;
   cursor: pointer;
+  background: #72af4f;
+  font-weight: bold;
 }
 
 .checkout-flex #form-wrapper {
-  max-height: 450px;
+  max-height: 500px;
+}
+
+#payment-options {
+  width: 34%;
 }
 
 .hidden {

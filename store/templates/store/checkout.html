@@ -4,7 +4,7 @@
 <div class="checkout-flex">
     <div class="box-element" id="form-wrapper">
         <form action="" id="form">
-            <div class="user-info">
+            <div class="user-info" id="user-info">
                 <p>User information</p>
                 <div class="form-field">
                     <input
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="shipping-info">
+            <div class="shipping-info" id="shipping-info">
                 <p>Shipping Information</p>
 
                 <div class="form-field">
@@ -110,9 +110,101 @@
         <h5>Items: {{order.get_cart_items}}</h5>
         <h5>Total: ${{order.get_cart_total|floatformat:2}}</h5>
     </div>
-
-    <div class="box-element payment-options hidden">
-        <small>Paypal Options</small>
-    </div>
 </div>
+<div class="box-element hidden" id="payment-options">
+    <small><strong>Payment Options</strong></small
+    ><br />
+    <button
+        style="border: transparent; cursor: pointer;"
+        id="make-payment"
+        class="continue-btn"
+    >
+        Make Payment
+    </button>
+</div>
+
+<script type="text/javascript">
+    var shipping = "{{order.shipping}}";
+    var total = "{{order.get_cart_total|floatformat:2}}";
+
+    if (shipping == "False") {
+        document.getElementById("shipping-info").innerHTML = "";
+    }
+
+    if (user != "AnonymousUser") {
+        document.getElementById("user-info").innerHTML = "";
+    }
+
+    if (shipping == "False" && user != "AnonymousUser") {
+        //user is logged in and items do not require shipping
+        document.getElementById("form-wrapper").classList.add("hidden");
+
+        //show payment options if logged in user orders items that do not require shipping
+
+        document.getElementById("payment-options").classList.remove("hidden");
+    }
+
+    var form = document.getElementById("form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        console.log("Form Submitted...");
+        document.getElementById("form-button").classList.add("hidden");
+        document.getElementById("payment-options").classList.remove("hidden");
+    });
+
+    document
+        .getElementById("make-payment")
+        .addEventListener("click", function (e) {
+            submitFormData();
+        });
+
+    function submitFormData() {
+        var userFormData = {
+            name: null,
+            email: null,
+            total: total,
+        };
+
+        var shippingInfo = {
+            address: null,
+            city: null,
+            state: null,
+            zipcode: null,
+            country: null,
+        };
+
+        if (shipping != "False") {
+            shippingInfo.address = form.address.value;
+            shippingInfo.city = form.city.value;
+            shippingInfo.state = form.state.value;
+            shippingInfo.zipcode = form.zipcode.value;
+            shippingInfo.country = form.country.value;
+        }
+
+        if (user == "AnonymousUser") {
+            userFormData.name = form.name.value;
+            UserFormData.email = form.email.value;
+        }
+
+        var url = "/process_order/";
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrftoken,
+            },
+            body: JSON.stringify({
+                form: UserFormData,
+                shipping: shippingInfo,
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("success: ", data);
+                alert("Transaction completed");
+                //  window.location.href = '{% url 'store' %}';;;
+            });
+    }
+</script>
 {% endblock content-block %}

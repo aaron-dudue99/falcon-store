@@ -24,8 +24,12 @@
             }
         }
 
+        .form-field {
+            padding: 0.3rem 0;
+        }
+
         .form-control {
-            border: #756f6f solid 1.2px;
+            border: #756f6f solid 2px;
             padding: 0.2rem;
             margin: 0.1rem;
             border-radius: 5px;
@@ -34,12 +38,18 @@
         #form-button {
             border: transparent;
             cursor: pointer;
+            background: $green;
+            font-weight: bold;
         }
     }
 
     #form-wrapper {
-        max-height: 450px;
+        max-height: 500px;
     }
+}
+
+#payment-options {
+    width: 34%;
 }
 
 .hidden {
