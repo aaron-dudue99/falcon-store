@@ -195,7 +195,7 @@
                 "X-CSRFToken": csrftoken,
             },
             body: JSON.stringify({
-                form: UserFormData,
+                form: userFormData,
                 shipping: shippingInfo,
             }),
         })
@@ -203,7 +203,7 @@
             .then((data) => {
                 console.log("success: ", data);
                 alert("Transaction completed");
-                //  window.location.href = '{% url 'store' %}';;;
+                window.location.href = "{% url 'store' %}";
             });
     }
 </script>
